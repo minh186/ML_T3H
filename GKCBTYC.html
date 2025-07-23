@@ -1,0 +1,166 @@
+<hoso-page style="font-size: 12pt; line-height: 20px;">
+  <div class="row align-items-start mb-3" style="text-align: center;">
+  <!-- Cột trái: Sở Y tế + BV -->
+  <div class="col-4 text-left">
+    <div>Sở Y tế: <span style="
+        display: inline-block;
+        min-width: 70px;
+        border-bottom: 1px dotted #000;
+        line-height: 1.2;
+      ">
+        {{ context.SoYTe }}
+      </span>
+    </div>
+    <div>BV: <span style="
+        display: inline-block;
+        min-width: 100px;
+        border-bottom: 1px dotted #000;
+        line-height: 1.2;
+      ">
+        {{ context.TenBenhVien }}
+      </span>
+    </div>
+  </div>
+
+  <!-- Cột giữa: Quốc hiệu -->
+  <div class="col-4 text-center">
+    <div>Cộng hoà Xã hội Chủ nghĩa Việt Nam</div>
+    <div>Độc lập - Tự do - Hạnh phúc</div>
+    <div>------------------------------</div>
+  </div>
+
+  <!-- Cột phải: MS + Số -->
+  <div class="col-4 text-right">
+    <div>MS: 03/BV-02</div>
+    <div>Số: <span style="
+        display: inline-block;
+        min-width: 70px;
+        border-bottom: 1px dotted #000;
+        line-height: 1.2;
+      ">
+        {{ context.SoPhieu }}
+      </span>
+    </div>
+  </div>
+</div>
+
+  
+  <div class="text-center font-weight-bold text-uppercase mb-2">Giấy khám chữa bệnh theo yêu cầu</div>
+
+  <div class="mb-2" style="display: flex; justify-content: center;">
+    <hs-textarea-line
+      label="Kính gửi:"
+      [value]="context.KinhGui"
+      update="KinhGui"
+      style="width: 400px;"
+    ></hs-textarea-line>
+  </div>
+
+
+  <div class="row">
+    <div class="col-8">
+      <hs-textarea-line label="- Tên tôi là:" [value]="context.HoTenBenhNhan" update="HoTenBenhNhan"></hs-textarea-line>
+    </div>
+    <div class="col-2">
+      <hs-textarea-line label="Tuổi:" [value]="context.Tuoi" update="Tuoi"></hs-textarea-line>
+    </div>
+    <div class="col-2">
+      <span>Nam/Nữ</span>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-6">
+      <hs-textarea-line label="- CMND/ Hộ chiếu/ Hộ khẩu số:" [value]="context.CMND" update="CMND"></hs-textarea-line>
+    </div>
+    <div class="col-6">
+      <hs-textarea-line label="Cơ quan cấp:" [value]="context.NoiCap" update="NoiCap"></hs-textarea-line>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-6">
+      <hs-textarea-line label="- Dân tộc:" [value]="context.DanToc" update="DanToc"></hs-textarea-line>
+    </div>
+    <div class="col-6">
+      <hs-textarea-line label="Ngoại kiều:" [value]="context.NgoaiKieu" update="NgoaiKieu"></hs-textarea-line>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-6">
+      <hs-textarea-line label="- Nghề nghiệp:" [value]="context.NgheNghiep" update="NgheNghiep"></hs-textarea-line>
+    </div>
+    <div class="col-6">
+      <hs-textarea-line label="Nơi làm việc:" [value]="context.NoiLamViec" update="NoiLamViec"></hs-textarea-line>
+    </div>
+  </div>
+
+  <hs-textarea-line label="- Địa chỉ:" [value]="context.DiaChi" update="DiaChi"></hs-textarea-line>
+  <hs-textarea-line label="- Khi cần báo tin:" [value]="context.NguoiLienHe" update="NguoiLienHe"></hs-textarea-line>
+  <hs-textarea-line label="- Là người bệnh/ đại diện gia đình người bệnh họ tên là:" [value]="context.NguoiDaiDien" update="NguoiDaiDien"></hs-textarea-line>
+
+  <div class="row">
+    <div class="col-6">
+      <hs-textarea-line label="Hiện đang khám/chữa bệnh tại Khoa:" [value]="context.Khoa" update="Khoa"></hs-textarea-line>
+    </div>
+    <div class="col-6">
+      <hs-textarea-line label="Bệnh viện:" [value]="context.TenBenhVien" update="TenBenhVien"></hs-textarea-line>
+    </div>
+  </div>
+
+  <p>1. Sau khi nghe bác sĩ phổ biến quy định, tôi xin khám/chữa bệnh theo yêu cầu và chọn dịch vụ như sau:</p>
+
+  <hs-textarea-line label="a. Bác sĩ khám/chữa/phẫu thuật/chăm sóc:" [value]="context.BacSi" update="BacSi"></hs-textarea-line>
+  <div>b. Y tá (điều dưỡng) chăm sóc theo chế độ bệnh lý tại giường.</div>
+  <div>c. Được dùng thuốc theo chỉ định của bác sĩ điều trị</div>
+  <hs-textarea-line label="d. Được nằm tại buồng loại:" [value]="context.LoaiBuong" update="LoaiBuong"></hs-textarea-line>
+  <div>có tiện nghi: điều hoà nhiệt độ, tủ lạnh, nước nóng lạnh, buồng vệ sinh riêng</div>
+
+  <hs-textarea-line label="2. Tôi xin ứng trước một khoản tiền:" [value]="context.TienUngTruoc" update="TienUngTruoc"></hs-textarea-line>
+  <hs-textarea-line label="(bằng chữ):" [value]="context.TienUngChu" update="TienUngChu"></hs-textarea-line>
+
+  <p>3. Trong khi thực hiện khám/ chữa bệnh theo yêu cầu, nếu có vấn đề phát sinh đề nghị bác sĩ thông báo cho tôi/ gia đình tôi/ biết để tiện thanh toán kịp thời.</p>
+  <p>4. Tôi xin chấp hành đầy đủ nội quy khám/ chữa bệnh của bệnh viện, yên tâm chữa bệnh và chịu trách nhiệm về những yêu cầu khám/ chữa bệnh của tôi.</p>
+
+  <div class="row mt-4">
+    <div class="col-6 text-center">
+      <div class="font-weight-bold">Giám đốc bệnh viện</div>
+      <br><br>
+      <br><br>
+      <div style="font-size: 13pt; display: flex; align-items: center;">
+        <strong style="margin-left: 60px;">Họ tên:</strong>
+        <hs-input-text
+          [value]="context.GiamDoc"
+          update="GiamDoc"
+          style="width: 250px; border-bottom: 1px dotted #000; border: none; display: inline-block; height: 24px; line-height: 1;"
+        ></hs-input-text>
+      </div>
+
+    </div>
+    <div class="col-6 text-center">
+      <p style="text-align: center; font-style: italic; font-size: 13pt;">
+        Ngày 
+        <span style="display: inline-block; min-width: 60px; border-bottom: 1px dotted #000;">{{ context.Ngay }}</span>
+        tháng 
+        <span style="display: inline-block; min-width: 60px; border-bottom: 1px dotted #000;">{{ context.Thang }}</span>
+        năm 
+        <span style="display: inline-block; min-width: 80px; border-bottom: 1px dotted #000;">{{ context.Nam }}</span>
+      </p>
+
+
+
+      <div class="font-weight-bold">Người bệnh / Đại diện gia đình</div>
+      <br><br>
+      <div style="font-size: 13pt; display: flex; align-items: center;">
+        <strong style="margin-left: 60px;">Họ tên:</strong>
+        <hs-input-text
+          [value]="context.NguoiKy"
+          update="NguoiKyNguoiKy"
+          style="width: 250px; border-bottom: 1px dotted #000; border: none; display: inline-block; height: 24px; line-height: 1;"
+        ></hs-input-text>
+</div>
+
+    </div>
+  </div>
+</hoso-page>
